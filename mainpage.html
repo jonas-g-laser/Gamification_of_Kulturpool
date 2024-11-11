@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meine Webseite</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        function loadStartPage(){
+            window.location.href = "startpage.html";
+        }
+    </script>
 </head>
 
 <body>
-<header>
+<header onclick="loadStartPage()">
     Kulturpool
 </header>
 <main>
 
-    <h1>This is the main page</h1>
+    <h1>Sie haben nach "" gesucht</h1>
+
+    <iframe src= ""></iframe>
 
 
 </main>
 <footer>
-    <p>&copy; 2024 Meine Webseite</p>
+    <p>2024 TU Graz / GameLab</p>
 </footer>
 </body>
 </html>
