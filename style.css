@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+main {
+    padding: 1em;
+}
+
+h1 {
+    font-family: Arial, serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 40px;
+
+}
+
+input {
+    border-radius: 10px;
+    width: 80%;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+
+footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+iframe {
+
+}
