@@ -13,13 +13,25 @@
 </header>
 <main>
     <div style="text-align: center">
-        <form action="mainpage.html" method="get">
+        <form onclick="search(event)">
             <label for="search">
                 <input type="search" id="search" placeholder="Wonach suchen Sie?" />
             </label>
-            <button type="submit">&#128270</button>
+            <button type="submit">Search</button>
         </form>
     </div>
+
+    <script>
+        function search(event) {
+            event.preventDefault();
+            const query = document.getElementById("search").value;
+            if (query) {
+                window.location.href = `mainpage.html?search=${encodeURIComponent(query)}`;
+            } else {
+                alert("Bitte geben Sie einen Suchbegriff ein."); // Warnung bei leerem Suchfeld
+            }
+        }
+    </script>
 </main>
 <footer>
     <p>2024 TU Graz / GameLab</p>

@@ -19,7 +19,21 @@
 </header>
 <main>
 
-    <h1>Sie haben nach "" gesucht</h1>
+    <h1 id = "searchResult"></h1>
+
+    <script>
+        function getSearchQuery() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get("search");
+        }
+
+        const query = getSearchQuery();
+        if (query) {
+            document.getElementById("searchResult").textContent = `Gesucht: ${query}`;
+        } else {
+            document.getElementById("searchResult").textContent = "Keine Suche eingegeben.";
+        }
+    </script>
 
     <iframe src= ""></iframe>
 
