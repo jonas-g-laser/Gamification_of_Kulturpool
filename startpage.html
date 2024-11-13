@@ -8,33 +8,46 @@
 </head>
 
 <body>
+
 <header>
     Kulturpool
 </header>
+
 <main>
     <div style="text-align: center">
-        <form onclick="search(event)">
+        <form id="searchForm">
             <label for="search">
                 <input type="search" id="search" placeholder="Wonach suchen Sie?" />
             </label>
             <button type="submit">Search</button>
         </form>
     </div>
-
-    <script>
-        function search(event) {
-            event.preventDefault();
-            const query = document.getElementById("search").value;
-            if (query) {
-                window.location.href = `mainpage.html?search=${encodeURIComponent(query)}`;
-            } else {
-                alert("Bitte geben Sie einen Suchbegriff ein."); // Warnung bei leerem Suchfeld
-            }
-        }
-    </script>
 </main>
+
 <footer>
     <p>2024 TU Graz / GameLab</p>
 </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const searchForm = document.getElementById("searchForm");
+        if (searchForm) {
+            searchForm.addEventListener("submit", function(event) {
+                event.preventDefault();  // Verhindert das Standardverhalten
+                const query = document.getElementById("search").value;
+                console.log("Suchbegriff:", query);
+
+                if (query) {
+                    window.location.href = "mainpage.html?search=" + encodeURIComponent(query);
+                } else {
+                    alert("Bitte geben Sie einen Suchbegriff ein.");
+                }
+            });
+        } else {
+            console.error("Formular mit der ID 'searchForm' nicht gefunden.");
+        }
+    });
+</script>
+
 </body>
 </html>

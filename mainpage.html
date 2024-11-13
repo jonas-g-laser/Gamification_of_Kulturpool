@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meine Webseite</title>
     <link rel="stylesheet" href="style.css">
-
-    <script>
-        function loadStartPage(){
-            window.location.href = "startpage.html";
-        }
-    </script>
 </head>
 
 <body>
@@ -19,7 +13,7 @@
 </header>
 <main>
 
-    <h1 id = "searchResult"></h1>
+    <h1 id="searchResult"></h1>
 
     <script>
         function getSearchQuery() {
@@ -39,8 +33,16 @@
 
 
 </main>
+
 <footer>
     <p>2024 TU Graz / GameLab</p>
 </footer>
+
+<script>
+    function loadStartPage(){
+        window.location.href = "startpage.html";
+    }
+</script>
+
 </body>
 </html>
