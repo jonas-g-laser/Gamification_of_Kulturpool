@@ -16,6 +16,15 @@ header {
     font-size: 30px;
 }
 
+.headline {
+    transition: 0.5s;
+}
+
+.headline:hover {
+    transform: translate(10%) scale(1.2);
+
+}
+
 main {
     padding: 1em;
 }
@@ -36,6 +45,12 @@ form {
     align-items: center;
     justify-content: center;
     width: 100%;
+    transition: 0.5s;
+}
+
+form:hover {
+    animation: zoom-in-zoom-out;
+    transform: scale(1.1);
 }
 
 .Searchbar{
@@ -49,16 +64,6 @@ input {
     font-family: bernhard modern, serif;
     font-size: 40px;
     height: 50px;
-    animation: fadein 2s;
-}
-
-@keyframes fadein {
-    0% {
-        opacity: 0; /* Vollständig transparent */
-    }
-    100% {
-        opacity: 1; /* Vollständig sichtbar */
-    }
 }
 
 input:hover {
@@ -70,16 +75,6 @@ button {
     height: 50px;
     width: 50px;
     background: #ffffff;
-    animation: fadein 2s;
-}
-
-@keyframes fadein {
-    0% {
-        opacity: 0; /* Vollständig transparent */
-    }
-    100% {
-        opacity: 1; /* Vollständig sichtbar */
-    }
 }
 
 button:hover {

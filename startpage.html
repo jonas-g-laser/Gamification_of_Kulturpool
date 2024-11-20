@@ -10,7 +10,9 @@
 <body>
 
 <header>
-    kultur_________________pool
+    <div class="headline">
+        kultur_________________pool
+    </div>
 </header>
 
 <main>
@@ -33,7 +35,7 @@
         const searchForm = document.getElementById("searchForm");
         if (searchForm) {
             searchForm.addEventListener("submit", function(event) {
-                event.preventDefault();  // Verhindert das Standardverhalten
+                event.preventDefault();
                 const query = document.getElementById("search").value;
                 console.log("Suchbegriff:", query);
 
