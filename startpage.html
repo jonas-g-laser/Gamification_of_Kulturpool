@@ -8,20 +8,23 @@
 </head>
 
 <body>
-
 <header>
     <div class="headline">
-        kultur_________________pool
+        <span>kultur</span><span class="spacer">_________________</span><span>pool</span>
     </div>
 </header>
 
 <main>
     <div class="Searchbar">
-        <form class="searchform" id="searchForm">
-            <label for="search">
-                <input type="search" id="search" placeholder="Wonach suchen Sie?" />
-            </label>
-            <button type="submit">&#128269</button>
+        <form id="searchForm" class="search-form">
+            <input
+                    type="search"
+                    id="search"
+                    name="search"
+                    placeholder="Wonach suchen Sie?"
+                    aria-label="Suchfeld"
+            />
+            <button type="submit" aria-label="Suche starten">&#128269;</button>
         </form>
     </div>
 </main>
@@ -31,25 +34,24 @@
 </footer>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", () => {
         const searchForm = document.getElementById("searchForm");
-        if (searchForm) {
-            searchForm.addEventListener("submit", function(event) {
-                event.preventDefault();
-                const query = document.getElementById("search").value;
-                console.log("Suchbegriff:", query);
+        const searchInput = document.getElementById("search");
 
-                if (query) {
-                    window.location.href = "mainpage.html?search=" + encodeURIComponent(query);
-                } else {
-                    alert("Bitte geben Sie einen Suchbegriff ein.");
-                }
-            });
-        } else {
-            console.error("Formular mit der ID 'searchForm' nicht gefunden.");
-        }
+        searchForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const query = searchInput.value.trim();
+
+            if (query) {
+                console.log("Suchbegriff:", query);
+                window.location.href = "mainpage.html?search=" + encodeURIComponent(query);
+            } else {
+                alert("Bitte geben Sie einen Suchbegriff ein.");
+            }
+        });
     });
 </script>
 
 </body>
+
 </html>
