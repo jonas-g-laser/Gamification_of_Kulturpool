@@ -9,6 +9,7 @@ Through an analysis of the website conducted by the responsible parties from Kul
 the study will identify key areas for improvement and implement changes that address both aesthetic and functional aspects. 
 The significance of this research lies in increasing the platform’s relevance and usability for a diverse range of users. 
 As the project progresses, more detailed insights and findings will be incorporated into this overview.
+
 ---
 ## Similar Approaches
 
