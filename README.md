@@ -50,7 +50,7 @@ I also thought about different use cases in gamification for the Website itself.
     - *Collect treasures:* Each time an object is found, the child receives a ‘reward’, e.g. a virtual stack of gold coins or a jewel.
     - *Achivement:* At the end of the tour, the child can add up all the treasures and receives a reward, such as a virtual treasure chest or a ‘Museum Treasure Hunter’ badge.
 - **Evaluation**: After completing the tour, the child can give simple feedback (e.g. a thumbs up, stars or emojis) on how exciting they found the treasure hunt.
----
+
 ### Teenagers (13-18 years)
 
 **Use Case:** Collection and Exchange of Favorite Artworks
@@ -72,7 +72,7 @@ I also thought about different use cases in gamification for the Website itself.
     - *Rewards for "temporal milestones"*: Each time an era is explored, the teenager receives a digital badge, e.g., "Renaissance Explorer".
     - *Masterpiece Collection*: The teenager can save masterpieces in a virtual collection, which is displayed at the end as a personal portfolio.
 - **Evaluation**: Feedback through a brief survey system (e.g., "What did you find most exciting?") or a star rating.
----
+
 ### Young adults (19 - 30 years)
 
 **Use Case:** Discovery and Inspiration for Creative Projects
