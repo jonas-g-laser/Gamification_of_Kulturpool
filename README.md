@@ -10,7 +10,6 @@ the study will identify key areas for improvement and implement changes that add
 The significance of this research lies in increasing the platform’s relevance and usability for a diverse range of users. 
 As the project progresses, more detailed insights and findings will be incorporated into this overview.
 
----
 ## Similar Approaches
 
 I have been looking for different ways to use gamification in museums. Three of these are listed here:
@@ -27,7 +26,7 @@ Through this collaboration, the MFA and Spaceport bridge the gap between art his
 
 - [**Museum in the Netherlands with Gamification:**](https://www.museumnext.com/article/new-museum-gamification-for-learning/) The Media Museum in Hilversum, Netherlands, has developed an educational app called Glitch to enhance student engagement during independent museum visits. 
 The app, designed to navigate the evolving media landscape, uses an avatar to guide students through interactive exhibits and help them understand media culture’s impact on society.
----
+
 ## Use Cases
 
 I also thought about different use cases in gamification for the Website itself.
@@ -94,7 +93,7 @@ I also thought about different use cases in gamification for the Website itself.
     - *Collector Levels*: Users can achieve "collector levels" based on how many artworks they add to their collection, e.g., "Inspiration Seeker" or "Creative Spirit".
     - *Badge for Complete Tour*: Completing the entire tour earns a virtual badge such as "Creative Curator".
 - **Evaluation**: The tour concludes with a survey where users can indicate how inspiring they found the works. In this age group, this is likely to be done through detailed feedback and scoring (e.g., 1-10)
----
+
 ## Current status of the project
 
 I was able to create a demo website based on the website [kulturpool.at](https://kulturpool.at) and integrated a Unity demo which is able to show different artworks and documents.
