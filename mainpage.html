@@ -8,13 +8,14 @@
 </head>
 
 <body>
+
 <header>
     <div class="headline" onclick=loadStartPage()>
         <span>kultur</span><span class="spacer">_________________</span><span>pool</span>
     </div>
 </header>
-<main>
 
+<main>
     <h1 id="searchResult"></h1>
 
     <div id="loader">
@@ -33,46 +34,8 @@
 <footer>
     <p>2024 TU Graz / GameLab</p>
 </footer>
-<script>
-    function loadStartPage(){
-        window.location.href = "index.html";
-    }
 
-    function getSearchQuery() {
-        const params = new URLSearchParams(window.location.search);
-        return params.get("search");
-    }
+<script src="script.js"></script>
 
-    const query = getSearchQuery();
-    if (query) {
-        document.getElementById("searchResult").textContent = `Gesucht: ${query}`;
-    } else {
-        document.getElementById("searchResult").textContent = "Keine Suche eingegeben";
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-        const loader = document.getElementById("loader");
-        const progressBar = document.querySelector(".progress");
-        const iframe = document.getElementById("webgl");
-
-        let progress = 0;
-
-        const simulateProgress = setInterval(() => {
-            if (progress < 80) {
-                progress += 10;
-                progressBar.style.width = progress + "%";
-            }
-        }, 300);
-
-        iframe.onload = () => {
-            clearInterval(simulateProgress);
-            progressBar.style.width = "100%";
-
-            setTimeout(() => {
-                loader.style.display = "none";
-            }, 1000);
-        };
-    });
-</script>
 </body>
 </html>

@@ -8,6 +8,7 @@
 </head>
 
 <body>
+
 <header>
     <div class="headline">
         <span>kultur</span><span class="spacer">_________________</span><span>pool</span>
@@ -33,25 +34,7 @@
     <p>2024 TU Graz / GameLab</p>
 </footer>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const searchForm = document.getElementById("searchForm");
-        const searchInput = document.getElementById("search");
-
-        searchForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-            const query = searchInput.value.trim();
-
-            if (query) {
-                console.log("Suchbegriff:", query);
-                window.location.href = "mainpage.html?search=" + encodeURIComponent(query);
-            } else {
-                alert("Bitte geben Sie einen Suchbegriff ein.");
-            }
-        });
-    });
-</script>
+<script src="script.js"></script>
 
 </body>
-
 </html>
