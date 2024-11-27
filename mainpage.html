@@ -17,22 +17,15 @@
 
     <h1 id="searchResult"></h1>
 
-    <script>
-        function getSearchQuery() {
-            const params = new URLSearchParams(window.location.search);
-            return params.get("search");
-        }
-
-        const query = getSearchQuery();
-        if (query) {
-            document.getElementById("searchResult").textContent = `Gesucht: ${query}`;
-        } else {
-            document.getElementById("searchResult").textContent = "Keine Suche eingegeben";
-        }
-    </script>
+    <div id="loader">
+        <div class="loading-bar">
+            <div class="progress"></div>
+        </div>
+        <p>Loading...</p>
+    </div>
 
     <div class="iframeContainer">
-        <iframe src="https://jonas-g-laser.github.io/Gamification_of_Kulturpool/WEB_GL/index.html"></iframe>
+        <iframe id="webgl" src="https://jonas-g-laser.github.io/Gamification_of_Kulturpool/WEB_GL/index.html"></iframe>
     </div>
 
 </main>
@@ -40,12 +33,46 @@
 <footer>
     <p>2024 TU Graz / GameLab</p>
 </footer>
-
 <script>
     function loadStartPage(){
         window.location.href = "index.html";
     }
-</script>
 
+    function getSearchQuery() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get("search");
+    }
+
+    const query = getSearchQuery();
+    if (query) {
+        document.getElementById("searchResult").textContent = `Gesucht: ${query}`;
+    } else {
+        document.getElementById("searchResult").textContent = "Keine Suche eingegeben";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const loader = document.getElementById("loader");
+        const progressBar = document.querySelector(".progress");
+        const iframe = document.getElementById("webgl");
+
+        let progress = 0;
+
+        const simulateProgress = setInterval(() => {
+            if (progress < 80) {
+                progress += 10;
+                progressBar.style.width = progress + "%";
+            }
+        }, 300);
+
+        iframe.onload = () => {
+            clearInterval(simulateProgress);
+            progressBar.style.width = "100%";
+
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 1000);
+        };
+    });
+</script>
 </body>
 </html>
