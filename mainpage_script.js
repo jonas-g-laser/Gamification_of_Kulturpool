@@ -2,19 +2,17 @@ function loadStartPage(){
     window.location.href = "index.html";
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    function getSearchQuery() {
-        const params = new URLSearchParams(window.location.search);
-        return params.get("search");
-    }
+function getSearchQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("search");
+}
 
-    const query = getSearchQuery();
-    if (query) {
-        document.getElementById("searchResult").textContent = `Gesucht: ${query}`;
-    } else {
-        document.getElementById("searchResult").textContent = "Keine Suche eingegeben";
-    }
-});
+const query = getSearchQuery();
+if (query) {
+    document.getElementById("searchResult").textContent = `Gesucht: ${query}`;
+} else {
+    document.getElementById("searchResult").textContent = "Keine Suche eingegeben";
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     const loader = document.getElementById("loader");
