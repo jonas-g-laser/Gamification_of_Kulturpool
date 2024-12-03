@@ -7,9 +7,20 @@ function getSearchQuery() {
     return params.get("search");
 }
 
+function displayImage(query) {
+    const imageContainer = document.getElementById("imageResult");
+    const image = document.createElement("img");
+    image.src = `images/${query}.jpg`;
+    image.alt = `Image for ${query}`;
+    imageContainer.appendChild(image);
+
+    document.querySelector("main").appendChild(imageContainer);
+}
+
 const query = getSearchQuery();
 if (query) {
     document.getElementById("searchResult").textContent = `Gesucht: ${query}`;
+    //displayImage(query); just testing
 } else {
     document.getElementById("searchResult").textContent = "Keine Suche eingegeben";
 }

@@ -143,3 +143,20 @@ iframe {
         opacity: 1;
     }
 }
+
+/*
+style of the image-container and image
+ */
+.image-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#imageResult {
+    text-align: center;
+}
+
+#imageResult img {
+    width: 30%;
+}
