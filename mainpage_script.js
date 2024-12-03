@@ -48,3 +48,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1000);
     };
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = getSearchQuery();
+    const iframe = document.getElementById("webgl");
+
+    if (!searchInput) {
+        console.error("Kein Suchbegriff vorhanden.");
+        return;
+    }
+
+    window.addEventListener("message", (event) => {
+        if (event.data.type === "UnityReady") {
+            console.log("Unity ist bereit. Nachricht wird gesendet...");
+            iframe.contentWindow.postMessage(
+                { type: "LoadImage", searchTerm: searchInput },
+                "https://jonas-g-laser.github.io"
+            );
+        }
+    });
+});

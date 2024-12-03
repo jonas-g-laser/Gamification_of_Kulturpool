@@ -24,6 +24,8 @@
         document.body.style.textAlign = "left";
       }
 
+      let unityInstance = null;
+
       createUnityInstance(document.querySelector("#unity-canvas"), {
         arguments: [],
         dataUrl: "Build/WEB_GL.data",
@@ -33,8 +35,25 @@
         companyName: "DefaultCompany",
         productName: "Museum_for_Kulturpool",
         productVersion: "0.1.0",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      }).then((instance) => {
+        unityInstance = instance;
+        console.log("Unity ist bereit.");
+        parent.postMessage({ type: "UnityReady" }, "*"); // Signal an die Hauptseite senden
+
+        // Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", (event) => {
+          if (event.data.type === "LoadImage") {
+            const searchTerm = event.data.searchTerm;
+            if (unityInstance) {
+              unityInstance.SendMessage("ImageManager", "LoadImageFromSearch", searchTerm);
+              console.log(`Suchbegriff "${searchTerm}" an Unity weitergegeben.`);
+            } else {
+              console.error("UnityInstance nicht verfügbar.");
+            }
+          }
+        });
+      }).catch((message) => {
+        console.error("Unity konnte nicht geladen werden:", message);
       });
     </script>
   </body>
