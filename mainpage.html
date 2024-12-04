@@ -16,29 +16,27 @@
 </header>
 
 <main>
-    <div class="search-container">
-        <h1 id="searchResult"></h1>
+    <div class="mainpage-SearchBar">
+        <form id="mainpage-searchForm">
+            <input
+                    type="search"
+                    id="mainpage-searchInput"
+                    aria-label="Suchfeld"
+            />
+            <button id="mainpage-searchButton" type="submit" aria-label="Suche starten">&#128269;</button>
+        </form>
     </div>
 
-    <!--
+
     <div id="loader">
-        <p style="font-size: 20px">Loading...</p>
         <div class="loading-bar">
-            <div class="progress"></div>
+            <div class="progress">Lädt virtuelles Museum...</div>
         </div>
     </div>
-    -->
 
     <div class="iframeContainer">
         <iframe id="webgl" src="https://jonas-g-laser.github.io/Gamification_of_Kulturpool/WEB_GL/index.html"></iframe>
     </div>
-
-    <!--
-    <div class="image-container">
-        <div id="imageResult"></div>
-    </div>
-    -->
-
 </main>
 
 <footer>

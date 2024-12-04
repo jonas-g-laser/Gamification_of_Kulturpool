@@ -7,22 +7,28 @@ function getSearchQuery() {
     return params.get("search");
 }
 
-function displayImage(query) {
-    const imageContainer = document.getElementById("imageResult");
-    const image = document.createElement("img");
-    image.src = `images/${query}.jpg`;
-    image.alt = `Image for ${query}`;
-    imageContainer.appendChild(image);
+document.addEventListener("DOMContentLoaded", () => {
+    const mainpage_searchForm = document.getElementById("mainpage-searchForm");
+    const mainpage_searchInput = document.getElementById("mainpage-searchInput");
 
-    document.querySelector("main").appendChild(imageContainer);
-}
+    mainpage_searchForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const query = mainpage_searchInput.value.trim();
+
+        if (query) {
+            console.log("Suchbegriff:", query);
+            window.location.href = "mainpage.html?search=" + encodeURIComponent(query);
+        } else {
+            alert("Bitte geben Sie einen Suchbegriff ein.");
+        }
+    });
+});
 
 const query = getSearchQuery();
 if (query) {
-    document.getElementById("searchResult").textContent = `Gesucht: ${query}`;
-    //displayImage(query); just testing
+    document.getElementById("mainpage-searchInput").placeholder = `Gesucht: ${query}`;
 } else {
-    document.getElementById("searchResult").textContent = "Keine Suche eingegeben";
+    document.getElementById("mainpage-searchInput").placeholder = "Keine Suche eingegeben";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -37,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
             progress += 10;
             progressBar.style.width = progress + "%";
         }
-    }, 300);
+    }, 100);
 
     iframe.onload = () => {
         clearInterval(simulateProgress);

@@ -1,3 +1,8 @@
+/*
+------------------------------------------------------------------------------------------------------------------------
+Everything what should used for all pages
+------------------------------------------------------------------------------------------------------------------------
+ */
 body {
     font-family: bernhard modern, serif;
     line-height: 1.6;
@@ -16,74 +21,12 @@ header {
     font-size: 30px;
 }
 
-.headline {
-    transition: 0.5s;
-}
-
-.headline:hover {
-    transform: translate(10%) scale(1.2);
-
-}
-
-main {
-    padding: 1em;
-}
-
 h1 {
     font-family: bernhard modern, serif;
     font-style: italic;
     text-align: center;
     font-size: 40px;
     color: #000000;
-}
-
-.search-container {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-form {
-    position: relative;
-    display: flex;
-    top: 10em;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    transition: 0.5s;
-}
-
-form:hover {
-    animation: zoom-in-zoom-out;
-    transform: scale(1.1);
-}
-
-.Searchbar{
-    position: relative;
-    top: 5em;
-}
-
-input {
-    border: 2px solid #000;
-    text-align: center;
-    font-family: bernhard modern, serif;
-    font-size: 40px;
-    height: 50px;
-}
-
-input:hover {
-    background: #dcdcdc;
-}
-
-button {
-    border: 2px solid #000;
-    height: 50px;
-    width: 50px;
-    background: #ffffff;
-}
-
-button:hover {
-    background: #dcdcdc;
 }
 
 footer {
@@ -96,7 +39,74 @@ footer {
     width: 100%;
 }
 
+.headline {
+    transition: 0.5s;
+}
+
+.headline:hover {
+    transform: translate(10%) scale(1.2);
+
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+Everything what is related to the index.html
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+Searchbar
+------------------------------------------------------------------------------------------------------------------------
+ */
+#searchForm {
+    position: relative;
+    display: flex;
+    top: 15em;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: 0.5s;
+}
+
+#searchForm:hover {
+    animation: zoom-in-zoom-out;
+    transform: scale(1.1);
+}
+
+#searchInput {
+    border: 2px solid #000;
+    text-align: center;
+    font-family: bernhard modern, serif;
+    font-size: 40px;
+    height: 50px;
+}
+
+#searchInput:hover {
+    background: #dcdcdc;
+}
+
+#searchButton {
+    border: 2px solid #000;
+    height: 50px;
+    width: 50px;
+    background: #ffffff;
+}
+
+#searchButton:hover {
+    background: #dcdcdc;
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+Everything what is related to the mainpage.html
+------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+Loading animation
+------------------------------------------------------------------------------------------------------------------------
+ */
+
 #loader {
+    position: relative;
+    top: 3em;
     width: 100%;
     height: 100%;
     color: black;
@@ -104,12 +114,11 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 500;
 }
 
 .loading-bar {
     width: 80%;
-    height: 10px;
+    height: 30px;
     background: #464646;
     border-radius: 5px;
     overflow: hidden;
@@ -117,17 +126,70 @@ footer {
 }
 
 .progress {
-    width: 0;
+    text-align: center;
+    font-size: 20px;
     height: 100%;
     background: #50af50;
     transition: width 0.2s ease-in-out;
 }
 
-.iframeContainer {
-    text-align: center;
+/*
+------------------------------------------------------------------------------------------------------------------------
+Mainpage Searchbar
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+#mainpage-searchForm {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 1em;
+    width: 100%;
+    transition: 0.5s;
 }
 
-iframe {
+#mainpage-searchForm:hover {
+    animation: zoom-in-zoom-out;
+    transform: scale(1.1);
+}
+
+#mainpage-searchInput {
+    border: 2px solid #000;
+    text-align: center;
+    font-family: bernhard modern, serif;
+    font-size: 40px;
+    height: 50px;
+}
+
+#mainpage-searchInput:hover {
+    background: #dcdcdc;
+}
+
+#mainpage-searchButton {
+    border: 2px solid #000;
+    height: 50px;
+    width: 50px;
+    background: #ffffff;
+}
+
+#mainpage-searchButton:hover {
+    background: #dcdcdc;
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+iFrame
+------------------------------------------------------------------------------------------------------------------------
+ */
+.iframeContainer {
+    position: relative;
+    text-align: center;
+    padding-top: 4em;
+}
+
+#webgl {
+    position: relative;
     width: 1280px;
     height: 724px;
     border: black solid 2px;
@@ -142,21 +204,4 @@ iframe {
     100% {
         opacity: 1;
     }
-}
-
-/*
-style of the image-container and image
- */
-.image-container {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#imageResult {
-    text-align: center;
-}
-
-#imageResult img {
-    width: 30%;
 }
