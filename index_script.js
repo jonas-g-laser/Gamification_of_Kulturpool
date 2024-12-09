@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     searchForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        const query = searchInput.value.trim();
+        const query = searchInput.value.trim().toLowerCase();
 
         if (query) {
             console.log("Suchbegriff:", query);

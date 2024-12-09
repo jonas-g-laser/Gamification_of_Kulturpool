@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     mainpage_searchForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        const query = mainpage_searchInput.value.trim();
+        const query = mainpage_searchInput.value.trim().toLowerCase();
 
         if (query) {
             console.log("Suchbegriff:", query);
