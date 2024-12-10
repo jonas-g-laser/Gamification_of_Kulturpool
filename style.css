@@ -182,10 +182,37 @@ Mainpage Searchbar
 iFrame
 ------------------------------------------------------------------------------------------------------------------------
  */
+#toggle-button-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 2em;
+    width: 100%;
+    height: 50px;
+}
+
+#iframe-toggle-button {
+    position: relative;
+    height: 100%;
+    width: 20%;
+    border: black solid 2px;
+    font-size: 25px;
+    font-family: bernhard modern, serif;
+    background-color: white;
+    z-index: 10;
+}
+
+#iframe-toggle-button:hover {
+    background: #dcdcdc;
+}
+
 .iframeContainer {
+    display: none;
     position: relative;
     text-align: center;
-    padding-top: 4em;
+    padding-top: 3em;
+    z-index: 0;
 }
 
 #webgl {

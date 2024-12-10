@@ -74,3 +74,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+const toggleButton = document.getElementById("iframe-toggle-button");
+const iframeContainer = document.querySelector(".iframeContainer");
+
+toggleButton.addEventListener("click", function () {
+
+    if (iframeContainer.style.display === "none" || iframeContainer.style.display === "") {
+        iframeContainer.style.display = "block";
+        toggleButton.textContent = "Virtuelles Museum ausblenden";
+    } else {
+        iframeContainer.style.display = "none";
+        toggleButton.textContent = "Virtuelles Museum anzeigen";
+    }
+});
