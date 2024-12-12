@@ -1,33 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kulturpool</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kulturpool</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<body>
+    <body>
+        <header>
+            <div class="headline" onclick="loadStartPage()">
+                <span>kultur</span><span class="spacer">_________________</span
+                ><span>pool</span>
+            </div>
+        </header>
 
-<header>
-    <div class="headline" onclick=loadStartPage()>
-        <span>kultur</span><span class="spacer">_________________</span><span>pool</span>
-    </div>
-</header>
+        <main>
+            <div class="mainpage-SearchBar">
+                <form id="mainpage-searchForm">
+                    <input
+                        type="search"
+                        id="mainpage-searchInput"
+                        aria-label="Suchfeld"
+                    />
+                    <button
+                        id="mainpage-searchButton"
+                        type="submit"
+                        aria-label="Suche starten"
+                    >
+                        &#128269;
+                    </button>
+                </form>
+            </div>
 
-<main>
-    <div class="mainpage-SearchBar">
-        <form id="mainpage-searchForm">
-            <input
-                    type="search"
-                    id="mainpage-searchInput"
-                    aria-label="Suchfeld"
-            />
-            <button id="mainpage-searchButton" type="submit" aria-label="Suche starten">&#128269;</button>
-        </form>
-    </div>
-
-    <!--
+            <!--
     <div id="loader">
         <div class="loading-bar">
             <div class="progress">Lädt virtuelles Museum...</div>
@@ -35,20 +41,24 @@
     </div>
     -->
 
-    <div id="toggle-button-div">
-        <button id="iframe-toggle-button">Virtuelles Museum starten</button>
-    </div>
+            <div id="toggle-button-div">
+                <button id="iframe-toggle-button">
+                    Virtuelles Museum starten
+                </button>
+            </div>
 
-    <div class="iframeContainer">
-        <iframe id="webgl" src="https://jonas-g-laser.github.io/Gamification_of_Kulturpool/WEB_GL/index.html"></iframe>
-    </div>
-</main>
+            <div class="iframeContainer">
+                <iframe
+                    id="webgl"
+                    src="https://jonas-g-laser.github.io/Gamification_of_Kulturpool/WEB_GL/index.html"
+                ></iframe>
+            </div>
+        </main>
 
-<footer>
-    <p>2024 TU Graz / GameLab</p>
-</footer>
+        <footer>
+            <p>2024 TU Graz / GameLab</p>
+        </footer>
 
-<script src="mainpage_script.js" defer></script>
-
-</body>
+        <script src="mainpage_script.js" defer></script>
+    </body>
 </html>

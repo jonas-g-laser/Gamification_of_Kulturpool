@@ -1,40 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Webseite</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meine Webseite</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<body>
+    <body>
+        <header>
+            <div class="headline">
+                <span>kultur</span><span class="spacer">_________________</span
+                ><span>pool</span>
+            </div>
+        </header>
 
-<header>
-    <div class="headline">
-        <span>kultur</span><span class="spacer">_________________</span><span>pool</span>
-    </div>
-</header>
+        <main>
+            <div class="Searchbar">
+                <form id="searchForm">
+                    <input
+                        type="search"
+                        id="searchInput"
+                        name="search"
+                        placeholder="Wonach suchen Sie?"
+                        aria-label="Suchfeld"
+                    />
+                    <button
+                        id="searchButton"
+                        type="submit"
+                        aria-label="Suche starten"
+                    >
+                        &#128269;
+                    </button>
+                </form>
+            </div>
+        </main>
 
-<main>
-    <div class="Searchbar">
-        <form id="searchForm">
-            <input
-                    type="search"
-                    id="searchInput"
-                    name="search"
-                    placeholder="Wonach suchen Sie?"
-                    aria-label="Suchfeld"
-            />
-            <button id="searchButton" type="submit" aria-label="Suche starten">&#128269;</button>
-        </form>
-    </div>
-</main>
+        <footer>
+            <p>2024 TU Graz / GameLab</p>
+        </footer>
 
-<footer>
-    <p>2024 TU Graz / GameLab</p>
-</footer>
-
-<script src="index_script.js" defer></script>
-
-</body>
+        <script src="index_script.js" defer></script>
+    </body>
 </html>
